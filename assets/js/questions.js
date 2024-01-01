@@ -1,3 +1,5 @@
+export { userInput };
+
 const startScreen = document.querySelector('#start-screen');
 const questions = document.querySelector('#questions');
 const questionTitle = document.querySelector('#question-title');
@@ -9,10 +11,11 @@ const finalScore = document.querySelector('#final-score');
 const initials = document.querySelector('#initials');
 const submitInitials = document.querySelector('#submit');
 
-
-let score = 0;
 let activeQuestionIndex = 0;
-let userInput = '';
+let userInput = {
+    userInitials: '',
+    userScore: 0
+}
 
 let question = [
     {
@@ -35,41 +38,41 @@ let question = [
         },
         correctAnswer: 3
     },
-    {
-        q: 'What is the name of Joey’s acting agent?',
-        a: {
-            1: 'Andrea', 
-            2: 'Estelle', 
-            3: 'Martha', 
-            4: 'Carol'
-        },
-        correctAnswer: 2
-    },
-    {
-        q: 'In which city is Friends set?',
-        a: {
-            1: 'Los Angeles', 
-            2: 'Miami', 
-            3: 'Seattle', 
-            4: 'New York City'
-        },
-        correctAnswer: 4
-    },
-    {
-        q: 'Phoebe has a twin sister. What is her name?',
-        a: {
-            1: 'Ursula', 
-            2: 'Scarlett', 
-            3: 'Rita', 
-            4: 'Sharon'
-        },
-        correctAnswer: 1
-    }
+    // {
+    //     q: 'What is the name of Joey’s acting agent?',
+    //     a: {
+    //         1: 'Andrea', 
+    //         2: 'Estelle', 
+    //         3: 'Martha', 
+    //         4: 'Carol'
+    //     },
+    //     correctAnswer: 2
+    // },
+    // {
+    //     q: 'In which city is Friends set?',
+    //     a: {
+    //         1: 'Los Angeles', 
+    //         2: 'Miami', 
+    //         3: 'Seattle', 
+    //         4: 'New York City'
+    //     },
+    //     correctAnswer: 4
+    // },
+    // {
+    //     q: 'Phoebe has a twin sister. What is her name?',
+    //     a: {
+    //         1: 'Ursula', 
+    //         2: 'Scarlett', 
+    //         3: 'Rita', 
+    //         4: 'Sharon'
+    //     },
+    //     correctAnswer: 1
+    // }
 ]
 
-startButton.addEventListener('click', function(event) {
+startButton.addEventListener('click', function(e) {
 
-    event.preventDefault();
+    e.preventDefault();
     startScreen.setAttribute('class', 'hide');
     questions.removeAttribute('class', 'hide');
 
@@ -85,20 +88,20 @@ startButton.addEventListener('click', function(event) {
             singleChoice.setAttribute('id', i);
             singleChoice.textContent = question[activeQuestionIndex].a[i];
     
-            singleChoice.addEventListener('click', function(event) {
-                event.preventDefault();
+            singleChoice.addEventListener('click', function(e) {
+                e.preventDefault();
                 
                 if (+singleChoice.id === question[activeQuestionIndex].correctAnswer) {
                     feedback.setAttribute('class', 'feedback');
                     feedback.textContent = 'Correct!';
-                    score++;
+                    userInput.userScore++;
                     activeQuestionIndex++;
                     if (activeQuestionIndex < question.length) {
                         displayQuestion();
                     } else {
                         questions.setAttribute('class', 'hide');
                         endScreen.removeAttribute('class', 'hide');
-                        finalScore.textContent = score;
+                        finalScore.textContent = userInput.userScore;
                     }                
                 } else {
                     feedback.setAttribute('class', 'feedback');
@@ -109,7 +112,7 @@ startButton.addEventListener('click', function(event) {
                     } else {
                         questions.setAttribute('class', 'hide');
                         endScreen.removeAttribute('class', 'hide');
-                        finalScore.textContent = score;
+                        finalScore.textContent = userInput.userScore;
                     }               
                 }
             })
@@ -119,7 +122,9 @@ startButton.addEventListener('click', function(event) {
 })
 
 
-submitInitials.addEventListener('click', function(event) {
-    event.preventDefault();
-    userInput = initials.value;
+submitInitials.addEventListener('click', function(e) {
+    e.preventDefault();
+    userInput.userInitials = initials.value;
+    window.location.href = 'highscores.html';
 })
+
