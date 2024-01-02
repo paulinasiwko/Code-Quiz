@@ -8,6 +8,7 @@ const endScreen = document.querySelector('#end-screen');
 const finalScore = document.querySelector('#final-score');
 const initials = document.querySelector('#initials');
 const submitInitials = document.querySelector('#submit');
+const time = document.querySelector('#time');
 
 let activeQuestionIndex = 0;
 let userInput = {
@@ -68,6 +69,22 @@ let question = [
     // }
 ]
 
+
+let count = 75;
+time.textContent = count;
+
+const timer = setInterval(function() {
+    count--;
+    time.textContent = count;
+    if (count === 0) {
+        clearInterval(timer);
+        questions.setAttribute('class', 'hide');
+        endScreen.removeAttribute('class', 'hide');
+        finalScore.textContent = userInput.userScore;
+    }
+}, 1000);
+
+
 startButton.addEventListener('click', function(e) {
 
     e.preventDefault();
@@ -100,6 +117,7 @@ startButton.addEventListener('click', function(e) {
                         questions.setAttribute('class', 'hide');
                         endScreen.removeAttribute('class', 'hide');
                         finalScore.textContent = userInput.userScore;
+                        clearInterval(timer);
                     }                
                 } else {
                     feedback.setAttribute('class', 'feedback');
@@ -111,6 +129,7 @@ startButton.addEventListener('click', function(e) {
                         questions.setAttribute('class', 'hide');
                         endScreen.removeAttribute('class', 'hide');
                         finalScore.textContent = userInput.userScore;
+                        clearInterval(timer);
                     }               
                 }
             })
