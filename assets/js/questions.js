@@ -1,5 +1,3 @@
-export { userInput };
-
 const startScreen = document.querySelector('#start-screen');
 const questions = document.querySelector('#questions');
 const questionTitle = document.querySelector('#question-title');
@@ -126,5 +124,7 @@ submitInitials.addEventListener('click', function(e) {
     e.preventDefault();
     userInput.userInitials = initials.value;
     window.location.href = 'highscores.html';
+    localStorage.setItem('userInput', JSON.stringify(userInput));
 })
+
 
