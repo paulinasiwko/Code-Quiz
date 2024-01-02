@@ -37,59 +37,56 @@ let question = [
         },
         correctAnswer: 3
     },
-    // {
-    //     q: 'What is the name of Joey’s acting agent?',
-    //     a: {
-    //         1: 'Andrea', 
-    //         2: 'Estelle', 
-    //         3: 'Martha', 
-    //         4: 'Carol'
-    //     },
-    //     correctAnswer: 2
-    // },
-    // {
-    //     q: 'In which city is Friends set?',
-    //     a: {
-    //         1: 'Los Angeles', 
-    //         2: 'Miami', 
-    //         3: 'Seattle', 
-    //         4: 'New York City'
-    //     },
-    //     correctAnswer: 4
-    // },
-    // {
-    //     q: 'Phoebe has a twin sister. What is her name?',
-    //     a: {
-    //         1: 'Ursula', 
-    //         2: 'Scarlett', 
-    //         3: 'Rita', 
-    //         4: 'Sharon'
-    //     },
-    //     correctAnswer: 1
-    // }
+    {
+        q: 'What is the name of Joey’s acting agent?',
+        a: {
+            1: 'Andrea', 
+            2: 'Estelle', 
+            3: 'Martha', 
+            4: 'Carol'
+        },
+        correctAnswer: 2
+    },
+    {
+        q: 'In which city is Friends set?',
+        a: {
+            1: 'Los Angeles', 
+            2: 'Miami', 
+            3: 'Seattle', 
+            4: 'New York City'
+        },
+        correctAnswer: 4
+    },
+    {
+        q: 'Phoebe has a twin sister. What is her name?',
+        a: {
+            1: 'Ursula', 
+            2: 'Scarlett', 
+            3: 'Rita', 
+            4: 'Sharon'
+        },
+        correctAnswer: 1
+    }
 ]
-
 
 let count = 75;
 time.textContent = count;
 
-const timer = setInterval(function() {
-    count--;
-    time.textContent = count;
-    if (count === 0) {
-        clearInterval(timer);
-        questions.setAttribute('class', 'hide');
-        endScreen.removeAttribute('class', 'hide');
-        finalScore.textContent = userInput.userScore;
-    }
-}, 1000);
-
-
 startButton.addEventListener('click', function(e) {
-
     e.preventDefault();
     startScreen.setAttribute('class', 'hide');
     questions.removeAttribute('class', 'hide');
+
+    const timer = setInterval(function() {
+        count--;
+        time.textContent = count;
+        if (count === 0) {
+            clearInterval(timer);
+            questions.setAttribute('class', 'hide');
+            endScreen.removeAttribute('class', 'hide');
+            finalScore.textContent = userInput.userScore;
+        }
+    }, 1000);
 
     displayQuestion();
 
@@ -123,6 +120,9 @@ startButton.addEventListener('click', function(e) {
                     feedback.setAttribute('class', 'feedback');
                     feedback.textContent = 'Wrong!';
                     activeQuestionIndex++;
+                    count -= 10;
+                    time.textContent = count;
+
                     if (activeQuestionIndex < question.length) {
                         displayQuestion();
                     } else {
