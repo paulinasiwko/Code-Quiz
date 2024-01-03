@@ -18,55 +18,86 @@ let userInput = {
 
 let question = [
     {
-        q: 'What did Joey buy for Chandler because they are best friends?',
+        q: 'Inside which HTML element do we put the JavaScript?',
         a: {
-            1: 'Pizza', 
-            2: 'Framed picture', 
-            3: 'Watch', 
-            4: 'Bracelet'
+            1: '<script>', 
+            2: '<javascript>', 
+            3: '<scripting>', 
+            4: '<js>'
+        },
+        correctAnswer: 1
+    },
+    {
+        q: 'How do you write "Hello World" in an alert box?',
+        a: {
+            1: 'alertBox("Hello Word");', 
+            2: 'msgBox("Hello Word");', 
+            3: 'msg("Hello Word");', 
+            4: 'alert("Hello Word");'
         },
         correctAnswer: 4
     },
     {
-        q: 'Which character says the last ever line in the series?',
+        q: 'How to write an IF statement in JavaScript?',
         a: {
-            1: 'Gunther', 
-            2: 'Phoebe', 
-            3: 'Chandler', 
-            4: 'Rachel'
+            1: 'if (i == 5)', 
+            2: 'if i = 5 then', 
+            3: 'if i == 5 then', 
+            4: 'if i = 5'
         },
-        correctAnswer: 3
+        correctAnswer: 1
     },
     {
-        q: 'What is the name of Joey’s acting agent?',
+        q: 'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
         a: {
-            1: 'Andrea', 
-            2: 'Estelle', 
-            3: 'Martha', 
-            4: 'Carol'
+            1: 'if i <> 5', 
+            2: 'if i =! 5 then', 
+            3: 'if (i <> 5)', 
+            4: 'if (i != 5)'
+        },
+        correctAnswer: 4
+    },
+    {
+        q: 'How does a FOR loop start?',
+        a: {
+            1: 'for (i <= 5; i++)', 
+            2: 'for (let i = 0; i <=5; i++)', 
+            3: 'for i = 1 to 5', 
+            4: 'for (i = 0l i <=5)'
         },
         correctAnswer: 2
     },
     {
-        q: 'In which city is Friends set?',
+        q: 'What is the correct way to write a JavaScript array?',
         a: {
-            1: 'Los Angeles', 
-            2: 'Miami', 
-            3: 'Seattle', 
-            4: 'New York City'
+            1: 'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")', 
+            2: 'var colors = "red", "green", "blue"', 
+            3: 'var colors = (1:"red", 2:"green", 3:"blue")', 
+            4: 'var colors = ["red", "green", "blue"]'
         },
         correctAnswer: 4
     },
     {
-        q: 'Phoebe has a twin sister. What is her name?',
+        q: 'Which event occurs when the user clicks on an HTML element?',
         a: {
-            1: 'Ursula', 
-            2: 'Scarlett', 
-            3: 'Rita', 
-            4: 'Sharon'
+            1: 'onmouseover', 
+            2: 'onchange', 
+            3: 'onclick', 
+            4: 'onmouseclick'
         },
-        correctAnswer: 1
+        correctAnswer: 3
+    },
+    {
+        q: 'Which operator is used to assign a value to a variable?',
+        a: {
+            1: '*', 
+            2: '-', 
+            3: '=', 
+            4: 'x'
+        },
+        correctAnswer: 3
     }
+
 ]
 
 let count = 75;
@@ -80,11 +111,12 @@ startButton.addEventListener('click', function(e) {
     const timer = setInterval(function() {
         count--;
         time.textContent = count;
-        if (count === 0) {
+        if (count <= 0 ) {
             clearInterval(timer);
             questions.setAttribute('class', 'hide');
             endScreen.removeAttribute('class', 'hide');
             finalScore.textContent = userInput.userScore;
+            time.textContent = "Time's up!";
         }
     }, 1000);
 
@@ -138,12 +170,15 @@ startButton.addEventListener('click', function(e) {
     }
 })
 
-
 submitInitials.addEventListener('click', function(e) {
     e.preventDefault();
     userInput.userInitials = initials.value;
     window.location.href = 'highscores.html';
-    localStorage.setItem('userInput', JSON.stringify(userInput));
+    
+    // localStorage used below was inspired by this tutorial: https://www.youtube.com/watch?v=DFhmNLKwwGw&ab_channel=JamesQQuick
+    const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
+    allUsers.push(userInput);
+    localStorage.setItem('allUsers', JSON.stringify(allUsers));
 })
 
 
