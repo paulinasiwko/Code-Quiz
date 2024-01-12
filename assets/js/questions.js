@@ -9,6 +9,7 @@ const finalScore = document.querySelector('#final-score');
 const initials = document.querySelector('#initials');
 const submitInitials = document.querySelector('#submit');
 const time = document.querySelector('#time');
+const questionImage = document.querySelector('#question-img');
 
 let activeQuestionIndex = 0;
 let userInput = {
@@ -25,7 +26,9 @@ let question = [
             3: 'Watch', 
             4: 'Bracelet'
         },
-        correctAnswer: 4
+        correctAnswer: 4,
+        img: "./assets/img/q-1.png",
+        alt: "Chandler holding a gift from Joey"
     },
     {
         q: `What are Monica and Ross' parents called?`,
@@ -35,7 +38,9 @@ let question = [
             3: 'Peter and Margaret', 
             4: 'Gerry and Mary'
         },
-        correctAnswer: 1
+        correctAnswer: 1,
+        img: "./assets/img/q-2.jpg",
+        alt: "Monica and Ross' parents"
     },
     {
         q: 'Which character says the last ever line in the series?',
@@ -45,7 +50,9 @@ let question = [
             3: 'Chandler', 
             4: 'Rachel'
         },
-        correctAnswer: 3
+        correctAnswer: 3,
+        img: "./assets/img/q-3.jpg",
+        alt: "Friends cast photo from the last episode"
     },
     {
         q: 'What is the name of Joey’s acting agent?',
@@ -55,7 +62,9 @@ let question = [
             3: 'Martha', 
             4: 'Carole'
         },
-        correctAnswer: 2
+        correctAnswer: 2,
+        img: "./assets/img/q-4.jpg",
+        alt: "Joey's agent"
     },
     {
         q: 'What did Ross dress up as to teach Ben about Christmas and Hanukkah?',
@@ -65,27 +74,9 @@ let question = [
             3: 'The Holiday Turtle', 
             4: 'The Holiday Tortoise'
         },
-        correctAnswer: 2
-    },
-    {
-        q: 'Which job did Rachel’s fiancé Barry Farber do?',
-        a: {
-            1: 'Lawyer', 
-            2: 'Plumber', 
-            3: 'Orthodontist', 
-            4: 'Journalist'
-        },
-        correctAnswer: 3
-    },
-    {
-        q: 'Ross is allergic to which kind of fruit?',
-        a: {
-            1: 'Lemon', 
-            2: 'Apple', 
-            3: 'Kiwi', 
-            4: 'Orange'
-        },
-        correctAnswer: 3
+        correctAnswer: 2,
+        img: "./assets/img/q-5.jpg",
+        alt: "Ross in the holiday costume"
     },
     {
         q: 'Phoebe has a twin sister. What is her name?',
@@ -95,17 +86,9 @@ let question = [
             3: 'Sharon', 
             4: 'Rita'
         },
-        correctAnswer: 2
-    },
-    {
-        q: 'In which city is Friends set?',
-        a: {
-            1: 'New York City', 
-            2: 'Los Angeles', 
-            3: 'Miami', 
-            4: 'Seattle'
-        },
-        correctAnswer: 1
+        correctAnswer: 2,
+        img: "./assets/img/q-6.png",
+        alt: "Phoebe with her twin sister"
     },
     {
         q: 'What is the name of the coffee shop used by the characters?',
@@ -115,7 +98,9 @@ let question = [
             3: 'Daily Grind', 
             4: 'Coffee Here'
         },
-        correctAnswer: 2
+        correctAnswer: 2,
+        img: "./assets/img/q-7.jpg",
+        alt: "Friends' coffee house"
     },
     {
         q: 'What instrument does Phoebe Buffay play?',
@@ -125,17 +110,9 @@ let question = [
             3: 'Cello', 
             4: 'Guitar'
         },
-        correctAnswer: 4
-    },
-    {
-        q: `What is the name of Phoebe's alter-ego?`,
-        a: {
-            1: `Phoebe Neeby`, 
-            2: 'Monica Bing', 
-            3: 'Regina Falange', 
-            4: 'Elaine Benes'
-        },
-        correctAnswer: 3
+        correctAnswer: 4,
+        img: "./assets/img/q-8.jpg",
+        alt: "Photo of Phoebe"
     },
     {
         q: `What kind of uniform does Joey wear to Monica and Chandler's wedding?`,
@@ -145,7 +122,9 @@ let question = [
             3: 'Fire fighter', 
             4: 'Baseball player'
         },
-        correctAnswer: 2
+        correctAnswer: 2,
+        img: "./assets/img/q-9.jpg",
+        alt: "Photo of Joey"
     },
     {
         q: `What is Janice most likely to say?`,
@@ -155,7 +134,9 @@ let question = [
             3: 'Oh... my... God!', 
             4: 'No way!'
         },
-        correctAnswer: 3
+        correctAnswer: 3,
+        img: "./assets/img/q-10.jpg",
+        alt: "Photo of Janice"
     },
     {
         q: `What is Chandler's middle name?`,
@@ -165,11 +146,22 @@ let question = [
             3: 'Kim', 
             4: 'Zachary'
         },
-        correctAnswer: 1
+        correctAnswer: 1,
+        img: "./assets/img/q-11.jpg",
+        alt: "Photo of Chandler"
+    },
+    {
+        q: `What is the name of Phoebe's alter-ego?`,
+        a: {
+            1: `Phoebe Neeby`, 
+            2: 'Monica Bing', 
+            3: 'Regina Falange', 
+            4: 'Elaine Benes'
+        },
+        correctAnswer: 3,
+        img: "./assets/img/q-8.jpg",
+        alt: "Photo of Phoebe"
     }
-
-
-
 ]
 
 let count = 75;
@@ -197,6 +189,8 @@ startButton.addEventListener('click', function(e) {
 
     function displayQuestion() {
 
+        questionImage.setAttribute("src", question[activeQuestionIndex].img);
+        questionImage.setAttribute("alt", question[activeQuestionIndex].alt);
         questionTitle.textContent = question[activeQuestionIndex].q;
         choices.textContent = '';
 
