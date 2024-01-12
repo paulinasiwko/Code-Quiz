@@ -1,11 +1,11 @@
 # Code-Quiz
 
 ## Description
-The aim of this project is creating code for a timed Code Quiz with multiple-choice questions using **JavaScript**. 
+The aim of this project is creating code for a timed Friends Quiz with multiple-choice questions using **JavaScript**. 
 
 By maintaining this deployed webpage, I aim to present a comprehensive overview of my work and make it easy for others to connect with me.
 
-This app runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code..
+This app runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code.
 
 ## Installation
 N/A

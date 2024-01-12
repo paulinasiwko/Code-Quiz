@@ -18,85 +18,157 @@ let userInput = {
 
 let question = [
     {
-        q: 'Inside which HTML element do we put the JavaScript?',
+        q: 'What did Joey buy for Chandler because they are best friends?',
         a: {
-            1: '<script>', 
-            2: '<javascript>', 
-            3: '<scripting>', 
-            4: '<js>'
-        },
-        correctAnswer: 1
-    },
-    {
-        q: 'How do you write "Hello World" in an alert box?',
-        a: {
-            1: 'alertBox("Hello Word");', 
-            2: 'msgBox("Hello Word");', 
-            3: 'msg("Hello Word");', 
-            4: 'alert("Hello Word");'
+            1: 'Pizza', 
+            2: 'Framed picture of a chimp', 
+            3: 'Watch', 
+            4: 'Bracelet'
         },
         correctAnswer: 4
     },
     {
-        q: 'How to write an IF statement in JavaScript?',
+        q: `What are Monica and Ross' parents called?`,
         a: {
-            1: 'if (i == 5)', 
-            2: 'if i = 5 then', 
-            3: 'if i == 5 then', 
-            4: 'if i = 5'
+            1: 'Jack and Judy', 
+            2: 'Jack and Jill', 
+            3: 'Peter and Margaret', 
+            4: 'Gerry and Mary'
         },
         correctAnswer: 1
     },
     {
-        q: 'How to write an IF statement for executing some code if "i" is NOT equal to 5?',
+        q: 'Which character says the last ever line in the series?',
         a: {
-            1: 'if i <> 5', 
-            2: 'if i =! 5 then', 
-            3: 'if (i <> 5)', 
-            4: 'if (i != 5)'
+            1: 'Gunther', 
+            2: 'Phoebe', 
+            3: 'Chandler', 
+            4: 'Rachel'
         },
-        correctAnswer: 4
+        correctAnswer: 3
     },
     {
-        q: 'How does a FOR loop start?',
+        q: 'What is the name of Joey’s acting agent?',
         a: {
-            1: 'for (i <= 5; i++)', 
-            2: 'for (let i = 0; i <=5; i++)', 
-            3: 'for i = 1 to 5', 
-            4: 'for (i = 0l i <=5)'
+            1: 'Andrea', 
+            2: 'Estelle', 
+            3: 'Martha', 
+            4: 'Carole'
         },
         correctAnswer: 2
     },
     {
-        q: 'What is the correct way to write a JavaScript array?',
+        q: 'What did Ross dress up as to teach Ben about Christmas and Hanukkah?',
         a: {
-            1: 'var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")', 
-            2: 'var colors = "red", "green", "blue"', 
-            3: 'var colors = (1:"red", 2:"green", 3:"blue")', 
-            4: 'var colors = ["red", "green", "blue"]'
+            1: 'The Holiday Aardvark', 
+            2: 'The Holiday Armadillo', 
+            3: 'The Holiday Turtle', 
+            4: 'The Holiday Tortoise'
+        },
+        correctAnswer: 2
+    },
+    {
+        q: 'Which job did Rachel’s fiancé Barry Farber do?',
+        a: {
+            1: 'Lawyer', 
+            2: 'Plumber', 
+            3: 'Orthodontist', 
+            4: 'Journalist'
+        },
+        correctAnswer: 3
+    },
+    {
+        q: 'Ross is allergic to which kind of fruit?',
+        a: {
+            1: 'Lemon', 
+            2: 'Apple', 
+            3: 'Kiwi', 
+            4: 'Orange'
+        },
+        correctAnswer: 3
+    },
+    {
+        q: 'Phoebe has a twin sister. What is her name?',
+        a: {
+            1: 'Scarlett', 
+            2: 'Ursula', 
+            3: 'Sharon', 
+            4: 'Rita'
+        },
+        correctAnswer: 2
+    },
+    {
+        q: 'In which city is Friends set?',
+        a: {
+            1: 'New York City', 
+            2: 'Los Angeles', 
+            3: 'Miami', 
+            4: 'Seattle'
+        },
+        correctAnswer: 1
+    },
+    {
+        q: 'What is the name of the coffee shop used by the characters?',
+        a: {
+            1: `St James' Perk`, 
+            2: 'Central Perk', 
+            3: 'Daily Grind', 
+            4: 'Coffee Here'
+        },
+        correctAnswer: 2
+    },
+    {
+        q: 'What instrument does Phoebe Buffay play?',
+        a: {
+            1: `Drums`, 
+            2: 'Flute', 
+            3: 'Cello', 
+            4: 'Guitar'
         },
         correctAnswer: 4
     },
     {
-        q: 'Which event occurs when the user clicks on an HTML element?',
+        q: `What is the name of Phoebe's alter-ego?`,
         a: {
-            1: 'onmouseover', 
-            2: 'onchange', 
-            3: 'onclick', 
-            4: 'onmouseclick'
+            1: `Phoebe Neeby`, 
+            2: 'Monica Bing', 
+            3: 'Regina Falange', 
+            4: 'Elaine Benes'
         },
         correctAnswer: 3
     },
     {
-        q: 'Which operator is used to assign a value to a variable?',
+        q: `What kind of uniform does Joey wear to Monica and Chandler's wedding?`,
         a: {
-            1: '*', 
-            2: '-', 
-            3: '=', 
-            4: 'x'
+            1: `Chef`, 
+            2: 'Soldier', 
+            3: 'Fire fighter', 
+            4: 'Baseball player'
+        },
+        correctAnswer: 2
+    },
+    {
+        q: `What is Janice most likely to say?`,
+        a: {
+            1: `Talk to the hand!`, 
+            2: 'Get me a coffee!', 
+            3: 'Oh... my... God!', 
+            4: 'No way!'
         },
         correctAnswer: 3
+    },
+    {
+        q: `What is Chandler's middle name?`,
+        a: {
+            1: `Muriel`, 
+            2: 'Jason', 
+            3: 'Kim', 
+            4: 'Zachary'
+        },
+        correctAnswer: 1
     }
+
+
 
 ]
 
@@ -116,7 +188,8 @@ startButton.addEventListener('click', function(e) {
             questions.setAttribute('class', 'hide');
             endScreen.removeAttribute('class', 'hide');
             finalScore.textContent = userInput.userScore;
-            time.textContent = "Time's up!";
+            time.textContent = "Time's up! ⌛";
+            feedback.textContent = '';
         }
     }, 1000);
 
@@ -137,7 +210,7 @@ startButton.addEventListener('click', function(e) {
                 
                 if (+singleChoice.id === question[activeQuestionIndex].correctAnswer) {
                     feedback.setAttribute('class', 'feedback');
-                    feedback.textContent = 'Correct!';
+                    feedback.textContent = 'Correct! 🎉';
                     userInput.userScore++;
                     activeQuestionIndex++;
                     if (activeQuestionIndex < question.length) {
@@ -150,7 +223,7 @@ startButton.addEventListener('click', function(e) {
                     }                
                 } else {
                     feedback.setAttribute('class', 'feedback');
-                    feedback.textContent = 'Wrong!';
+                    feedback.textContent = 'Wrong! 😿';
                     activeQuestionIndex++;
                     count -= 10;
                     time.textContent = count;
