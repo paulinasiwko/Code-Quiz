@@ -26,7 +26,7 @@ After opening the code in the browser the resulting analysis looks as following:
 
 ![A screenshot of the deployed application](./assets/img/screenshot-deployed.PNG)
 
-The [URL](https://paulinasiwko.github.io/Code-Quiz/highscores.html) of deployed application.
+The [URL](https://paulinasiwko.github.io/Code-Quiz/) of deployed application.
 
 ## Credits
 Use of localStorage for highscores was inspired by [this tutorial](https://www.youtube.com/watch?v=DFhmNLKwwGw&ab_channel=JamesQQuick)
