@@ -1,14 +1,13 @@
 # Code-Quiz
 
+![GitHub top language](https://img.shields.io/github/languages/top/paulinasiwko/Code-Quiz)
+
 ## Description
 The aim of this project is creating code for a timed Friends Quiz with multiple-choice questions using **JavaScript**. 
 
 By maintaining this deployed webpage, I aim to present a comprehensive overview of my work and make it easy for others to connect with me.
 
 This app runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code.
-
-## Installation
-N/A
 
 ## Usage
 A dataset is composed of an **array** with questions and answers. For each question only one answer is correct.
@@ -28,8 +27,13 @@ After opening the code in the browser the resulting analysis looks as following:
 
 The [URL](https://paulinasiwko.github.io/Code-Quiz/) of deployed application.
 
-## Credits
-Use of localStorage for highscores was inspired by [this tutorial](https://www.youtube.com/watch?v=DFhmNLKwwGw&ab_channel=JamesQQuick)
 
-## Licence 
-N/A
+## Technologies Used
+
+- ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) 
+- ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+
+## Credits
+Use of localStorage for highscores was inspired by [this tutorial](https://www.youtube.com/watch?v=DFhmNLKwwGw&ab_channel=JamesQQuick).
