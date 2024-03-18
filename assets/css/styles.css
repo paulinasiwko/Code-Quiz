@@ -97,6 +97,11 @@ li:nth-child(odd) {
   right: 10px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .question-img {
   height: 200px;
   display: block;
