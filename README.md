@@ -7,7 +7,7 @@ The aim of this project is creating code for a timed Friends Quiz with multiple-
 
 By maintaining this deployed webpage, I aim to present a comprehensive overview of my work and make it easy for others to connect with me.
 
-This app runs in the browser, and features dynamically updated HTML and CSS powered by JavaScript code.
+This application operates within the browser environment, with HTML dynamically updated using **jQuery**. Styling has been implemented using **Tailwind**.
 
 ## Usage
 A dataset is composed of an **array** with questions and answers. For each question only one answer is correct.
