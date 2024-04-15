@@ -164,7 +164,7 @@ let question = [
     }
 ]
 
-let count = 1075;
+let count = 75;
 time.textContent = count;
 
 startButton.addEventListener('click', function(e) {

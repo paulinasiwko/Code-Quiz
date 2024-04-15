@@ -1,3 +1,11 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: Arial;
   font-size: 120%;
@@ -72,9 +80,9 @@ li:nth-child(odd) {
   display: none;
 }
 
-.start {
+/* .start {
   text-align: center;
-}
+} */
 
 .scores {
   position: absolute;
