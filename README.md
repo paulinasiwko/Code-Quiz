@@ -23,7 +23,7 @@ After clicking on 'Clear Highscores' button, local storage is cleared.
 
 After opening the code in the browser the resulting analysis looks as following:
 
-![A screenshot of the deployed application](./assets/img/screenshot-deployed.PNG)
+![A screenshot of the deployed application](./assets/img/screenshot.JPG)
 
 The [URL](https://paulinasiwko.github.io/Code-Quiz/) of deployed application.
 
@@ -31,8 +31,11 @@ The [URL](https://paulinasiwko.github.io/Code-Quiz/) of deployed application.
 ## Technologies Used
 
 - ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) 
-- ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 - ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+- ![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+- ![ghPages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=GitHub%20Pages&logoColor=white)
+
 
 
 ## Credits

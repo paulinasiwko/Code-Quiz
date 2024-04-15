@@ -243,7 +243,6 @@ submitInitials.addEventListener('click', function(e) {
     userInput.userInitials = initials.value;
     window.location.href = 'highscores.html';
     
-    // localStorage used below was inspired by this tutorial: https://www.youtube.com/watch?v=DFhmNLKwwGw&ab_channel=JamesQQuick
     const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
     allUsers.push(userInput);
     localStorage.setItem('allUsers', JSON.stringify(allUsers));

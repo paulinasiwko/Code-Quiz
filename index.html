@@ -7,13 +7,16 @@
     <title>Coding Quiz</title>
 
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/css/output.css" />
   </head>
 
-  <body>
-    <div class="absolute top-0 mt-5 left-0 ml-5"><a href="highscores.html">View Highscores</a></div>
+  <body class="bg-purple-500 text-white">
+    <div class="absolute top-0 mt-5 left-0 ml-5 text-lg sm:mt-10 sm:ml-10">
+      <a href="highscores.html" class="hover:text-yellow-400">View Highscores</a>
+    </div>
 
-    <div class="absolute top-0 mt-5 right-0 mr-5">Time: <span id="time">0</span></div>
+    <div class="absolute top-0 mt-5 right-0 mr-5 text-lg sm:mt-10 sm:mr-10">
+      Time: <span id="time">0</span>
+    </div>
 
     <div class="my-32 mx-auto max-w-xl p-8 border-8 border-double border-yellow-300">
       <div id="start-screen" class="text-center">
@@ -27,17 +30,17 @@
       </div>
 
       <div id="questions" class="hidden">
-        <img id="question-img" class="block h-48 m-auto max-w-full">
+        <img id="question-img" class="block h-48 m-auto mb-4 max-w-full">
         <h2 id="question-title"></h2>
         <div id="choices"></div>
       </div>
 
       <div id="end-screen" class="hidden">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
+        <h2 class="text-2xl font-bold mb-4">All done!</h2>
+        <p class="mt-1">Your final score is <span id="final-score"></span>.</p>
+        <p class="mt-5">
           Enter initials: <input type="text" id="initials" max="3" class="text-black" />
-          <button id="submit" class="inline-block m-3 cursor-pointer bg-purple-900 py-1 px-3 text-white rounded-md hover:bg-yellow-600">Submit</button>
+          <button id="submit" class="inline-block my-3 cursor-pointer bg-purple-900 py-1 px-3 text-white rounded-md hover:bg-yellow-600">Submit</button>
         </p>
       </div>
 
@@ -45,6 +48,5 @@
     </div>
 
     <script src="./assets/js/questions.js"></script>
-    <!-- <script src="./assets/js/logic.js"></script> -->
   </body>
 </html>
