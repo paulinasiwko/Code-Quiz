@@ -169,16 +169,16 @@ time.textContent = count;
 
 startButton.addEventListener('click', function(e) {
     e.preventDefault();
-    startScreen.setAttribute('class', 'hide');
-    questions.removeAttribute('class', 'hide');
+    startScreen.setAttribute('class', 'hidden');
+    questions.removeAttribute('class', 'hidden');
 
     const timer = setInterval(function() {
         count--;
         time.textContent = count;
         if (count <= 0 ) {
             clearInterval(timer);
-            questions.setAttribute('class', 'hide');
-            endScreen.removeAttribute('class', 'hide');
+            questions.setAttribute('class', 'hidden');
+            endScreen.removeAttribute('class', 'hidden');
             finalScore.textContent = userInput.userScore;
             time.textContent = "Time's up! ⌛";
             feedback.textContent = '';
@@ -197,26 +197,27 @@ startButton.addEventListener('click', function(e) {
         for (let i = 1; i <= 4; i++) {
             let singleChoice = document.createElement('button');
             singleChoice.setAttribute('id', i);
+            singleChoice.setAttribute('class', 'block my-2 cursor-pointer bg-purple-900 py-1 px-3 text-white rounded-md hover:bg-yellow-600')
             singleChoice.textContent = question[activeQuestionIndex].a[i];
     
             singleChoice.addEventListener('click', function(e) {
                 e.preventDefault();
                 
                 if (+singleChoice.id === question[activeQuestionIndex].correctAnswer) {
-                    feedback.setAttribute('class', 'feedback');
+                    feedback.setAttribute('class', 'italic text-white border-t-2 mt-4 pt-3');
                     feedback.textContent = 'Correct! 🎉';
                     userInput.userScore++;
                     activeQuestionIndex++;
                     if (activeQuestionIndex < question.length) {
                         displayQuestion();
                     } else {
-                        questions.setAttribute('class', 'hide');
-                        endScreen.removeAttribute('class', 'hide');
+                        questions.setAttribute('class', 'hidden');
+                        endScreen.removeAttribute('class', 'hidden');
                         finalScore.textContent = userInput.userScore;
                         clearInterval(timer);
                     }                
                 } else {
-                    feedback.setAttribute('class', 'feedback');
+                    feedback.setAttribute('class', 'italic text-white border-t-2 mt-4 pt-3');
                     feedback.textContent = 'Wrong! 😿';
                     activeQuestionIndex++;
                     count -= 10;
@@ -225,8 +226,8 @@ startButton.addEventListener('click', function(e) {
                     if (activeQuestionIndex < question.length) {
                         displayQuestion();
                     } else {
-                        questions.setAttribute('class', 'hide');
-                        endScreen.removeAttribute('class', 'hide');
+                        questions.setAttribute('class', 'hidden');
+                        endScreen.removeAttribute('class', 'hidden');
                         finalScore.textContent = userInput.userScore;
                         clearInterval(timer);
                     }               

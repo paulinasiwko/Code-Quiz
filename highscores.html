@@ -11,12 +11,12 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <h1>Highscores</h1>
-      <ol id="highscores"></ol>
+    <div class="my-20 mx-auto max-w-xl p-8 border-8 border-double border-yellow-300">
+      <h1 class="text-3xl font-bold mb-4">Highscores</h1>
+      <ol id="highscores" class="max-h-96 overflow-auto list-decimal list-inside"></ol>
 
-      <a href="index.html"><button>Go Back</button></a>
-      <button id="clear">Clear Highscores</button>
+      <a href="index.html"><button class="inline-block mt-4 cursor-pointer bg-purple-900 py-1 px-3 text-white rounded-md hover:bg-yellow-600">Go Back</button></a>
+      <button id="clear" class="inline-block mt-4 cursor-pointer bg-purple-900 py-1 px-3 text-white rounded-md hover:bg-yellow-600">Clear Highscores</button>
     </div>
 
     <script src="./assets/js/scores.js"></script>

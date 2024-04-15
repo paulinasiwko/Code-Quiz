@@ -21,7 +21,7 @@ a:hover {
   color: var(--hover-yellow);
 }
 
-button {
+/* button {
   display: inline-block;
   margin: 5px;
   cursor: pointer;
@@ -32,72 +32,77 @@ button {
   color: white;
   border: 0;
   transition: background-color 0.1s;
-}
-
+} */
+/* 
 button:hover {
   background-color: var(--hover-yellow);
-}
+} */
 
-.choices button {
+/* .choices button {
   display: block;
-}
+} */
 
-input[type="text"] {
+/* ??? */
+/* input[type="text"] {
   font-size: 100%;
-}
+} */
 
-ol {
+/* ol {
   padding-left: 0px;
   max-height: 400px;
   overflow: auto;
-}
+} */
 
-li {
+
+
+
+
+/* li {
   padding: 5px;
   list-style: decimal inside none;
-}
+} */
 
-li:nth-child(odd) {
+/* li:nth-child(odd) {
   background-color: var(--dark-purple);
-}
+} */
 
-.wrapper {
+
+
+
+
+/* .wrapper {
   margin: 100px auto 0 auto;
   max-width: 600px;
   padding: 40px;
   border: 10px double var(--yellow);
-}
-
-.hide {
-  display: none;
-}
-
-/* .start {
-  text-align: center;
 } */
 
-.scores {
+/* .hide {
+  display: none;
+} */
+
+/* .scores {
   position: absolute;
   top: 10px;
   left: 10px;
-}
+} */
 
-.feedback {
+/* .feedback {
   font-style: italic;
   font-size: 120%;
   margin-top: 20px;
   padding-top: 10px;
   color: white;
   border-top: 2px solid #ccc;
-}
+} */
 
-.timer {
+/* .timer {
   position: absolute;
   top: 10px;
   right: 10px;
-}
+} */
 
-img {
+/* img {
   max-width: 100%;
   height: auto;
 }
@@ -106,4 +111,4 @@ img {
   height: 200px;
   display: block;
   margin: auto;
-}
+} */

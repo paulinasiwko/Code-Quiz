@@ -8,6 +8,12 @@ if (users != null || users != undefined) {
     for (let i = 0; i < users.length; i++) {
         let addToRanking = document.createElement('li');
         addToRanking.textContent = users[i].userInitials + ' - ' + users[i].userScore;
+        addToRanking.setAttribute('class', 'py-1 px-3');
+
+        if (i % 2 === 0) {
+            addToRanking.setAttribute('class', 'py-1 px-3 bg-purple-900'); 
+        }
+
         highscores.appendChild(addToRanking);  
     }    
 }
